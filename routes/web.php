@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/faq', function () {
+    return view('question');
+});
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
