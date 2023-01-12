@@ -7,6 +7,16 @@
     <title>FAQ</title>
 </head>
 <body>
-    <h1>this is the FAQ page</h1>
+    <div class="category_body">
+        <h2 class="category"></h2>
+        <br>
+        <div class="question_body">
+            <h3 class="question"></h3>
+            <hr>
+            <p class="answer"></p>
+        </div>
+        <br><hr><br>
+    </div>
+    <hr><br><hr>
 </body>
 </html>
