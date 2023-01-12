@@ -7,6 +7,11 @@
     <title>Profile</title>
 </head>
 <body>
-    <h1>this is the profile page</h1>
+    <div class="profile">
+        <h2 class="username"></h2>
+        <h4 class="birthday"></h4>
+        <img src="#" alt="profile picture" class="profile picture">
+        <p class="about"></p>
+    </div>
 </body>
 </html>
