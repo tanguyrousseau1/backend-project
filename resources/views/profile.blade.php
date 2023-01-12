@@ -1,5 +1,9 @@
 @extends('main')
 
+@section('title')
+    Profile
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
