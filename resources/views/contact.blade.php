@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact</title>
-</head>
-<body>
-    <div class="contact_form">
-        <h1>Contact the Team</h1>
-        <form action="#" method="post">
-            <label for="Name">Your Name</label>
-            <input type="text" name="Name" id="Name" required>
+@extends('main')
 
-            <label for="Email">Your Email</label>
-            <input type="text" name="Email" id="Email" required>
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Contact the Team</h1>
+                <form action="#" method="post">
+                    <label for="Name">Your Name</label>
+                    <input type="text" name="Name" id="Name" required><br>
 
-            <label for="Message">Your Message</label>
-            <input type="text" name="Message" id="Message" required>
+                    <label for="Email">Your Email</label>
+                    <input type="text" name="Email" id="Email" required><br>
 
-            <button type="submit">Submit</button>
-        </form>
+                    <label for="Message">Your Message</label>
+                    <input type="text" name="Message" id="Message" required><br>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+@endsection

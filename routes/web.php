@@ -16,8 +16,8 @@ use App\Http\Controllers;
 
 Route::get('/contact', [Controllers\ContactController::class, 'getContact']);
 
-Route::get('profile', [Controlles\UserController::class, 'getProfile']);
+Route::get('/profile', [Controllers\UserController::class, 'getProfile']);
 
-Route::get('faq', [Controllers\FAQController::class, 'getQuestions']);
+Route::get('/faq', [Controllers\FAQController::class, 'getQuestions']);
 
 Route::get('/', [Controllers\NewsController::class, 'getIndex']);

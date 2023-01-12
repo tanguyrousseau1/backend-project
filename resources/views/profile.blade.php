@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile</title>
-</head>
-<body>
-    <div class="profile">
-        <h2 class="username"></h2>
-        <h4 class="birthday"></h4>
-        <img src="#" alt="profile picture" class="profile picture">
-        <p class="about"></p>
+@extends('main')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h3>Username</h3>
+                <h4>Birthday</h4>
+                <p>About me</p>
+            </div>
+            <div class="col-md-4 offset-md-1">
+                <img src="#" alt="profile picture">
+            </div>
+        </div>
     </div>
-</body>
-</html>
+@endsection
