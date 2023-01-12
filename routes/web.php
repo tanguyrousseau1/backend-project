@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [Controllers\ContactController::class, 'getContact']);
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('profile', [Controlles\UserController::class, 'getProfile']);
 
-Route::get('/faq', function () {
-    return view('question');
-});
+Route::get('faq', [Controllers\FAQController::class, 'getQuestions']);
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [Controllers\NewsController::class, 'getIndex']);
