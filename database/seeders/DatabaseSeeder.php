@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,21 +28,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'test',
 
         ])*/
-        DB::table('news')->insert([
-            'title' => Str::random(10),
-            'content' => Str::random(100)
-        ]);
-        DB::table('news')->insert([
-            'title' => Str::random(10),
-            'content' => Str::random(100)
-        ]);
-        DB::table('news')->insert([
-            'title' => Str::random(10),
-            'content' => Str::random(100)
-        ]);
-        DB::table('news')->insert([
-            'title' => Str::random(10),
-            'content' => Str::random(100)
-        ]);
+        //Eloquent::unguard();
+        $this->call(newsSeeder::class);
+        $this->call(UsersSeeder::class);
     }
 }

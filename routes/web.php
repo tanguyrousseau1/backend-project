@@ -19,6 +19,19 @@ Route::get('/contact', [Controllers\ContactController::class, 'getContact']);
 
 Route::get('/profile', [Controllers\UserController::class, 'getProfile']);
 
+Route::get('/login', [Controllers\LoginController::class, 'getLogin']);
+Route::post('/login/checklogin', [Controllers\LoginController::class, 'checklogin']);
+Route::get('login/successlogin', function () {
+    $news = DB::table('news')->get();
+
+    return view('index', ['news' => $news]);
+});
+Route::get('login/logout', function () {
+    $news = DB::table('news')->get();
+
+    return view('index', ['news' => $news]);
+});
+
 Route::get('/faq', [Controllers\FAQController::class, 'getQuestions']);
 
 Route::get('/', function () {
