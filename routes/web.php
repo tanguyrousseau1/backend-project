@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers;
 
 /*
@@ -20,4 +21,8 @@ Route::get('/profile', [Controllers\UserController::class, 'getProfile']);
 
 Route::get('/faq', [Controllers\FAQController::class, 'getQuestions']);
 
-Route::get('/', [Controllers\NewsController::class, 'getIndex']);
+Route::get('/', function () {
+    $news = DB::table('news')->get();
+
+    return view('index', ['news' => $news]);
+});
