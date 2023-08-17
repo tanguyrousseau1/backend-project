@@ -32,9 +32,11 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/profile">Profile</a>
-                    </li>
+                    @if(session()->exists('id'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profile/{{session()->get('id')}}">Profile</a>
+                        </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>

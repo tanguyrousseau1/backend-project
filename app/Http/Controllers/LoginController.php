@@ -27,6 +27,7 @@ class LoginController extends Controller
 
         if(Auth::attempt($user_data))
         {
+            $request->session()->put('id', Auth::id());
             return redirect('index');
         }
         else

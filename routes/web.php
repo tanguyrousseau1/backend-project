@@ -17,7 +17,7 @@ use App\Http\Controllers;
 
 Route::get('/contact', [Controllers\ContactController::class, 'getContact']);
 
-Route::get('/profile', [Controllers\UserController::class, 'getProfile']);
+Route::get('/profile/{id?}', function($id) { return [Controllers\UserController::class, 'getProfile'.$id]; });
 
 Route::get('/login', [Controllers\LoginController::class, 'getLogin']);
 Route::post('/login/checklogin', [Controllers\LoginController::class, 'checklogin']);
